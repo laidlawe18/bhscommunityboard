@@ -1,0 +1,22 @@
+{% extends "scanner/scanner_base.html" %}
+
+{% load staticfiles %}
+
+{% block title %}User{% endblock %}
+
+
+{% block scripts %}
+
+{% endblock %}
+
+{% block container %}
+<h1>{{ person.first_name }} {{ person.last_name }}</h1>
+<h2 id="id">ID {{ person.id }} | {{ person.hours|floatformat:1 }} hours</h1>
+<h3><a href="{% url 'admin edit info' %}">Edit information</a></h3>
+{% if person.can_add_leadership_members %}
+<h3><a href="{% url 'admin add leadership' %}">Add leadership member</a></h3>
+{% endif %}
+{% if person.can_change_leadership_permissions %}
+<h3><a href="{% url 'admin change permissions' %}">Change leadership permissions</a></h3>
+{% endif %}
+{% endblock %}

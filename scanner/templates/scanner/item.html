@@ -1,0 +1,16 @@
+{% extends "scanner/scanner_base.html" %}
+
+{% load staticfiles %}
+
+{% block title %}Item{% endblock %}
+
+{% block stylesheet %}<link rel="stylesheet" href="{% static '/static/scanner/item.css' %}" type="text/css" />{% endblock %}
+
+{% block scripts %}
+
+{% endblock %}
+
+{% block container %}
+<h1>{{ item.name }}</h1>
+<h2>ID {{ item.id }}</h2>
+{% endblock %}

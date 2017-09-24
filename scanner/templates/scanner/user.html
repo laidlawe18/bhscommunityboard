@@ -1,0 +1,76 @@
+{% extends "scanner/scanner_base.html" %}
+
+{% load staticfiles %}
+
+{% block title %}User{% endblock %}
+
+{% block scripts %}
+
+{% endblock %}
+
+{% block container %}
+<h1>{{ person.first_name }} {{ person.last_name }}</h1>
+<h2 id="id">ID {{ person.id }} | {{ person.hours|floatformat:1 }} hours</h1>
+<div id="skills">
+    <div class="skill skill-{{ person.electronics_level }}" id="skill-electronics">
+        <img src="{% static 'scanner/images/3d_printing.png' %}" class="skill-image" />
+        <h2 class="skill-level">{{ person.electronics_level }}</h2>
+    </div>
+    <div class="skill skill-{{ person.cad_3d_level }}" id="skill-cad-3d">
+        <img src="{% static 'scanner/images/3d_printing.png' %}" class="skill-image" />
+        <h2 class="skill-level">{{ person.cad_3d_level }}</h2>
+    </div>
+    <div class="skill skill-{{ person.printing_3d_level }}" id="skill-printing-3d">
+        <img src="{% static 'scanner/images/3d_printing.png' %}" class="skill-image" />
+        <h2 class="skill-level">{{ person.printing_3d_level }}</h2>
+    </div>
+    <div class="skill skill-{{ person.vinyl_cutting_level }}" id="skill-vinyl-cutting">
+        <img src="{% static 'scanner/images/3d_printing.png' %}" class="skill-image" />
+        <h2 class="skill-level">{{ person.vinyl_cutting_level }}</h2>
+    </div>
+    <div class="skill skill-{{ person.cad_2d_level }}" id="skill-cad-2d">
+        <img src="{% static 'scanner/images/3d_printing.png' %}" class="skill-image" />
+        <h2 class="skill-level">{{ person.cad_2d_level }}</h2>
+    </div>
+    <div class="skill skill-{{ person.video_editing_level }}" id="skill-video-editing">
+        <img src="{% static 'scanner/images/3d_printing.png' %}" class="skill-image" />
+        <h2 class="skill-level">{{ person.video_editing_level }}</h2>
+    </div>
+    <div class="skill skill-{{ person.sewing_level }}" id="skill-sewing">
+        <img src="{% static 'scanner/images/3d_printing.png' %}" class="skill-image" />
+        <h2 class="skill-level">{{ person.sewing_level }}</h2>
+    </div>
+</div>
+<h3>Scan an item to check it in or out:</h3>
+<form action="{% url 'scan' person.id %}" method="post" id="scan-form">
+    {% csrf_token %}
+    <input id="scan-input" type="number" name="{{ form.scan.name }}" autofocus />
+    <input id="submit-input" type="submit" value="Enter" />
+</form>
+{% for message in messages %}
+    <h4 class="message">{{ message }}</h4>
+{% endfor %}
+<h3>Checked out items:</h3>
+<table id="checkouts">
+    <tr id="checkout-title">
+            <td>Item name</td>
+            <td>ID</td>
+            <td>Date checked out</td>
+            <td>Due date</td>
+        </tr>
+    {% for checkout in checkouts %}
+        <tr>
+            <td>{{ checkout.item.name }}</td>
+            <td>{{ checkout.item.id }}</td>
+            <td>{{ checkout.date_checked_out.date }}</td>
+            
+            <td>{{ checkout.date_due.date }}</td>
+        </tr>
+    {% endfor %}
+    
+    
+</table>
+{% if checkouts|length == 0 %}
+    <p id="no-checkouts">No checkouts</p>
+{% endif %}
+{% endblock %}

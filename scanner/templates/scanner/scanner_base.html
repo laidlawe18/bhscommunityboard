@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+{% load tags %}
+
+{% block title %}Scanner{% endblock %}
+
+{% block stylesheet %}<link rel="stylesheet" href="{% static '/static/scanner/scanner_base.css' %}" type="text/css" />{% endblock %}
+
+{% block scripts %}
+
+{% endblock %}
+
+{% block content %}
+<div id="header">
+    <h1>iCreate Lab</h1>
+    
+
+    {% url 'main' as main %}
+    {% url 'checkin' as checkin %}
+    {% url 'admin' as admin %}
+    {% url 'schedule' as schedule %}
+
+    <p><a class="{% active request main %}" href="{{ main }}">Main</a> | <a class="{% active request checkin %}" href="{{ checkin }}">Checkin</a> | <a class="{% active request schedule %}" href="{{ schedule }}">Schedule</a> | <a class="{% active request admin %}" href="{{ admin }}">Admin</a></p>
+</div>
+<div id="container">
+    {% block container %}
+        <h2>Scan a barcode:</h2>
+        <form action="/scanner/" method="post" id="scan-form">
+            {% csrf_token %}
+            <input id="scan-input" type="number" name="{{ form.scan.name }}" autofocus />
+            <input id="submit-input" type="submit" value="Enter" />
+        </form>
+    {% endblock %}
+</div>
+
+
+{% endblock %}

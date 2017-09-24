@@ -1,0 +1,21 @@
+{% extends "scanner/scanner_base.html" %}
+
+{% load staticfiles %}
+
+{% block title %}Scanner{% endblock %}
+
+{% block scripts %}
+
+{% endblock %}
+
+{% block container %}
+<h2>Scan a barcode to check in our out:</h2>
+<form action="/scanner/checkin" method="post" id="scan-form">
+    {% csrf_token %}
+    <input id="scan-input" type="number" name="{{ form.scan.name }}" autofocus />
+    <input id="submit-input" type="submit" value="Enter" />
+</form>
+{% for message in messages %}
+    <h4 class="message">{{ message }}</h4>
+{% endfor %}
+{% endblock %}

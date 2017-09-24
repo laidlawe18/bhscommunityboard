@@ -1,0 +1,30 @@
+{% extends "scanner/scanner_base.html" %}
+
+{% load staticfiles %}
+
+{% block scripts %}
+
+{% endblock %}
+
+{% block container %}
+<h2>{{ period.day.date }} | {{ period.period_letter }} period</h2>
+<h4>Leadership team members:</h4>
+{% for lm in leadership_members %}
+<p>{{ lm.first_name }} {{ lm.last_name }}</p>
+{% endfor %}
+<h4>Other people:</h4>
+{% for person in other_people %}
+<p>{{ person.first_name }} {{ person.last_name }}</p>
+{% endfor %}
+<h4>Enter ID to sign up or un-sign up for this period: ({{ available_slots }} available slots)</h4>
+<form action="{% url 'schedule period' period.day.date.month period.day.date.day period.day.date.year period.period_letter %}" method="post" id="scan-form">
+    {% csrf_token %}
+    <input id="period-signup-input" type="number" name="{{ form.scan.name }}" autofocus />
+    <input id="submit-input" type="submit" value="Enter" />
+</form>
+{% if period.periodclass_set.all.exists %}
+<h4>Class: {{ period.periodclass_set.all.0.teacher.last_name }}</h4>
+{% elif available_slots >= 10 %}
+<a href="{% url 'schedule period class' period.day.date.month period.day.date.day period.day.date.year period.period_letter %}"><h4>Sign up a class</h4></a>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "scanner/scanner_base.html" %}
+
+{% load staticfiles %}
+
+{% block title %}User{% endblock %}
+
+
+{% block scripts %}
+
+{% endblock %}
+
+{% block container %}
+<h3>Admin login:</h3>
+{% if next %}
+<form action="{% url 'admin login' %}/?next={{next}}" method="post" >
+{%else%}
+<form action="{% url 'admin login' %}" method="post" >
+{% endif %}
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Submit" />
+</form>
+{% endblock %}

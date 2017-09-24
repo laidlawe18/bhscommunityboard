@@ -1,0 +1,282 @@
+body {
+    background-color: #EEEEEE;
+    font-family: Verdana;
+    color: #444444;
+}
+
+#header {
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 5px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+    background-color: white;
+}
+
+#header p {
+    font-size: 20px;
+}
+
+.nav-current {
+    color: #1111CC;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-link {
+    color: #444444;
+    text-decoration: none;
+}
+
+#container {
+    margin-top: 20px;
+    background-color: white;
+    padding: 30px;
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#container h1 {
+    display: inline-block;
+    width: 600px;
+    margin-top: 0;
+}
+#id {
+    margin-top: 0px;
+    width: 290px;
+    margin-left: auto;
+    display: inline-block;
+    text-align: right;
+}
+
+#checkouts {
+    margin-left: auto;
+    margin-right: auto;
+    width: 870px;
+    border-collapse: collapse;
+}
+
+#checkout-title {
+    font-weight: bold;
+    background-color: #EEEEEE;
+}
+
+#checkouts tr {
+    height: 50px;
+}
+
+#checkouts td {
+    text-align: center;
+}
+
+#no-checkouts {
+    text-align: center;
+}
+
+.message {
+    color: #1111CC;
+    text-align: center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+
+#scan-input {
+    width: 300px;
+    display: block;
+    height: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 50px;
+    color: #1111CC;
+    font-weight: bold;
+}
+
+#submit-input {
+    width: 80px;
+    height: 25px;
+    display: none;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.period-letter {
+    height: 20px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#schedule {
+    width: 870px;
+    /*border-collapse: collapse;*/
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#schedule td {
+    text-align: center;
+    width: 124px;
+    height: 40px;
+    font-size: 12px;
+    vertical-align: top;
+    border: 2px solid white;
+    padding: 10px;
+}
+
+#schedule p {
+    margin: 0;
+}
+
+#schedule-title {
+    font-weight: bold;
+    background-color: #EEEEEE;
+    vertical-align: center;
+}
+
+#schedule-title td {
+    height: 20px;
+}
+
+.A-period {
+    background-color: #FFEEEE;
+}
+
+.B-period {
+    background-color: #E3FFEE;
+}
+
+.C-period {
+    background-color: #FFFFE3;
+}
+
+.D-period {
+    background-color: #FFEEFF;
+}
+
+.E-period {
+    background-color: #E3EEFF;
+}
+
+.F-period {
+    background-color: #E3FFFF;
+}
+
+.G-period {
+    background-color: #DDEEDD;
+}
+
+.skill {
+    display: inline-block;
+    background-color: green;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    color: white;
+    margin-bottom: 10px;
+    margin-left: 4px;
+    margin-right: 4px;
+    border-bottom: 10px solid black;
+    
+}
+
+.skill-0 {
+    opacity: .3;
+}
+
+.skill-1 {
+    opacity: .5;
+}
+
+.skill-2 {
+    opacity: .65;
+}
+
+.skill-3 {
+    opacity: .88;
+}
+
+.skill-4 {
+    opacity: 1;
+}
+
+/*
+.skill-0 {
+    border-bottom: 15px solid #DD2200;
+}
+
+.skill-1 {
+    border-bottom: 15px solid #EE9944;
+}
+
+.skill-2 {
+    border-bottom: 15px solid #EEEE33;
+}
+
+.skill-3 {
+    border-bottom: 15px solid #99FF55;
+}
+
+.skill-4 {
+    border-bottom: 15px solid #11AA11;
+}
+*/
+
+#skill-electronics {
+    background-color: #FF3333;
+    
+}
+
+#skill-cad-3d {
+    background-color: #33AA33;
+}
+
+#skill-cad-2d {
+    background-color: #FFAA33;
+}
+
+#skill-printing-3d {
+    background-color: #FF33FF;
+}
+
+#skill-sewing {
+    background-color: #33CCCC;
+}
+
+#skill-video-editing {
+    background-color: #3333FF;
+}
+
+#skill-vinyl-cutting {
+    background-color: #BBBB33;
+}
+
+.skill-level {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#skills {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.skill-image {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+

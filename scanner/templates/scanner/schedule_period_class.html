@@ -1,0 +1,16 @@
+{% extends "scanner/scanner_base.html" %}
+
+{% load staticfiles %}
+
+{% block scripts %}
+
+{% endblock %}
+
+{% block container %}
+<h2>{{ period.day.date }} | {{ period.period_letter }} period</h2>
+<form action="{% url 'schedule period class' period.day.date.month period.day.date.day period.day.date.year period.period_letter %}" method="post" id="scan-form">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Enter" />
+</form>
+{% endblock %}

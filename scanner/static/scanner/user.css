@@ -1,0 +1,103 @@
+body {
+    background-color: #EEEEEE;
+    font-family: Verdana;
+    color: #444444;
+}
+
+#header {
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 5px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+    background-color: white;
+}
+
+#header p {
+    font-size: 20px;
+}
+
+#nav-current {
+    color: #1111CC;
+}
+
+.nav-link {
+    color: #444444;
+    text-decoration: none;
+}
+
+#container {
+    margin-top: 20px;
+    background-color: white;
+    padding: 30px;
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#scan-input {
+    width: 300px;
+    display: block;
+    height: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 50px;
+    color: #1111CC;
+    font-weight: bold;
+}
+
+#submit-input {
+    width: 80px;
+    height: 25px;
+    display: none;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#container h1 {
+    display: inline-block;
+    width: 600px;
+    margin-top: 0;
+}
+h2 {
+    margin-top: 0px;
+    width: 290px;
+    margin-left: auto;
+    display: inline-block;
+    text-align: right;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    width: 870px;
+    border-collapse: collapse;
+}
+
+#checkout-title {
+    font-weight: bold;
+    background-color: #EEEEEE;
+}
+
+tr {
+    height: 50px;
+}
+
+td {
+    text-align: center;
+}
+
+#no-checkouts {
+    text-align: center;
+}
+
+.message {
+    color: #1111CC;
+    text-align: center;
+}

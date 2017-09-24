@@ -1,0 +1,15 @@
+{% extends "scanner/scanner_base.html" %}
+
+{% load staticfiles %}
+
+{% block scripts %}
+
+{% endblock %}
+
+{% block container %}
+<form action="{% url 'scan' idnum %}" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Submit" />
+</form>
+{% endblock %}

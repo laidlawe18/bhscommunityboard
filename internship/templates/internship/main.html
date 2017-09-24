@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+
+{% block title %}Internships{% endblock %}
+
+{% block stylesheet %}<link rel="stylesheet" href="{% static '/static/internship/stylesheet.css' %}" type="text/css" />{% endblock %}
+
+{% block scripts %}
+
+{% endblock %}
+
+{% block content %}
+<div id="container">
+    
+    <h1>Available Internships</h1>
+    {% for x in internships %}
+    <div class="internship">
+        <h3 class="internship_title"><a href="https://bhs-community-board-laidlawe18.c9users.io/internship/int/{{ x.name }}">{{ x.name }} | {{ x.number_of_openings }} openings</a></h1>
+        <p class="internship_description">{{ x.description }}</p>
+    </div>
+    {% endfor %}
+    
+</div>
+
+
+{% endblock %}

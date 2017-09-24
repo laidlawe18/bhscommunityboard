@@ -1,0 +1,19 @@
+{% extends "scanner/scanner_base.html" %}
+
+{% load staticfiles %}
+
+{% block title %}User{% endblock %}
+
+
+{% block scripts %}
+
+{% endblock %}
+
+{% block container %}
+<h1>Edit information</h1>
+<form action="{% url 'admin edit info' %}" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Submit" />
+</form>
+{% endblock %}
