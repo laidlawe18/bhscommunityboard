@@ -25,7 +25,7 @@ SECRET_KEY = '%c-1a+1i=kbf)um529enhfjvf)4i$(j6-vl)1x%v(*qfvy$1@1'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = [".herokuapp.com", ".researchthroughdesign.org"]
+ALLOWED_HOSTS = [".herokuapp.com"]
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 
@@ -79,12 +79,6 @@ WSGI_APPLICATION = 'bhs_community_board.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
 
 
 # Password validation
