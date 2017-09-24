@@ -31,7 +31,7 @@ class CheckoutItem(models.Model):
     id = models.IntegerField(primary_key=True)
     name = models.CharField(max_length=30)
     description = models.TextField(max_length=300)
-    default_checkout_time = models.IntegerField()
+    default_checkout_time = models.IntegerField(default=14)
     
 class Checkin(models.Model):
     person = models.ForeignKey(Person)
