@@ -1,0 +1,1 @@
+web: gunicorn bhs_community_board.wsgi --log-file -
