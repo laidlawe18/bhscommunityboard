@@ -1,12 +1,12 @@
 from django.shortcuts import render, HttpResponseRedirect
 from django.core.urlresolvers import reverse
-from forms import ScanForm, NewUserForm, NewItemForm, AdminLoginForm, NewLeadershipMemberForm, ChangePermissionsForm, LeadershipEditInfoForm, PeriodClassSignupForm
-from models import Person, CheckoutItem, Checkout, Checkin, LeadershipMember, ScheduleDay, Period, PeriodPerson, PeriodClass
+from .forms import ScanForm, NewUserForm, NewItemForm, AdminLoginForm, NewLeadershipMemberForm, ChangePermissionsForm, LeadershipEditInfoForm, PeriodClassSignupForm
+from .models import Person, CheckoutItem, Checkout, Checkin, LeadershipMember, ScheduleDay, Period, PeriodPerson, PeriodClass
 from datetime import datetime, timedelta, date, time
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
-from decorators import not_login_required
+from .decorators import not_login_required
 
 # Create your views here.
 

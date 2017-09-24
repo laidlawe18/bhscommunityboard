@@ -1,5 +1,5 @@
 from django import forms
-from models import Person, CheckoutItem, LeadershipMember
+from .models import Person, CheckoutItem, LeadershipMember
 from django.contrib.auth.models import User
 
 class ScanForm(forms.Form):
